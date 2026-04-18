@@ -14,7 +14,7 @@ El mapa usa una vista dividida:
 | ------------------------------ | ------------------------------ |
 | Clústeres Urbanos de Homicidio | Clústeres Rurales de Homicidio |
 
-**Abre el mapa:** [`Homicidios_Urbano_Rurales.html`](Homicidios_Urbano_Rurales.html)
+**Abre el mapa:** [`index.html`](index.html)
 
 ---
 
