@@ -20,6 +20,16 @@
 </head>
 <body>
   <div id="app"></div>
+  <div id="webglWarning" class="webgl-warning" role="alert" hidden>
+    <h2>Su navegador tiene WebGL desactivado</h2>
+    <p>Este mapa usa Kepler.gl / deck.gl, que dibuja con aceleración 3D (WebGL). Para verlo:</p>
+    <ul>
+      <li><strong>Firefox:</strong> en <code>about:config</code> ponga <code>webgl.disabled</code> en <em>false</em> y active
+        <em>Ajustes → General → Rendimiento → Usar aceleración por hardware</em>.</li>
+      <li><strong>Chrome / Edge / Brave:</strong> active <em>Usar aceleración gráfica cuando esté disponible</em> en Configuración → Sistema.</li>
+      <li>Compruebe su soporte en <a href="https://get.webgl.org" target="_blank" rel="noopener">get.webgl.org</a> y actualice los controladores de vídeo.</li>
+    </ul>
+  </div>
   <noscript>Este mapa requiere JavaScript.</noscript>
 
   <div class="map-title map-title-left">Clústeres Urbanos · Homicidio</div>

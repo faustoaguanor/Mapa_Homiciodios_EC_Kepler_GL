@@ -83,10 +83,31 @@
       .moran-sidebar.open .moran-panel { width: 160px; }
     }
 
+    .webgl-warning {
+      position: fixed; inset: 0; z-index: 20000; box-sizing: border-box;
+      padding: 12vh 8vw; background: #1d2129; color: #d8dde6;
+      font: 15px/1.6 'ff-clan-web-pro', 'Helvetica Neue', Helvetica, sans-serif;
+      overflow-y: auto;
+    }
+    .webgl-warning[hidden] { display: none; }
+    .webgl-warning h2 { color: #fff; margin-top: 0; }
+    .webgl-warning a { color: #7fc4e8; }
+    .webgl-warning code { background: rgba(255,255,255,.1); padding: 1px 5px; border-radius: 3px; }
+
   </style>
 </head>
 <body>
   <div id="app"></div>
+  <div id="webglWarning" class="webgl-warning" role="alert" hidden>
+    <h2>Su navegador tiene WebGL desactivado</h2>
+    <p>Este mapa usa Kepler.gl / deck.gl, que dibuja con aceleración 3D (WebGL). Para verlo:</p>
+    <ul>
+      <li><strong>Firefox:</strong> en <code>about:config</code> ponga <code>webgl.disabled</code> en <em>false</em> y active
+        <em>Ajustes → General → Rendimiento → Usar aceleración por hardware</em>.</li>
+      <li><strong>Chrome / Edge / Brave:</strong> active <em>Usar aceleración gráfica cuando esté disponible</em> en Configuración → Sistema.</li>
+      <li>Compruebe su soporte en <a href="https://get.webgl.org" target="_blank" rel="noopener">get.webgl.org</a> y actualice los controladores de vídeo.</li>
+    </ul>
+  </div>
   <noscript>Este mapa requiere JavaScript.</noscript>
 
   <div class="map-title map-title-left">Clústeres Urbanos · Homicidio</div>
@@ -131,6 +152,21 @@
  * y carga los datos incrustados por scripts/build.py (window.MAPA_DATA, window.MAPA_CONFIG). */
 (function () {
   'use strict';
+
+  /* Kepler.gl (deck.gl) necesita WebGL: si el navegador lo tiene desactivado,
+   * se avisa en lugar de dejar que falle con "An error in deck.gl". */
+  function hasWebGL() {
+    try {
+      var c = document.createElement('canvas');
+      return Boolean(c.getContext('webgl2') || c.getContext('webgl'));
+    } catch (e) {
+      return false;
+    }
+  }
+  if (!hasWebGL()) {
+    document.getElementById('webglWarning').hidden = false;
+    return;
+  }
 
   var reducers = Redux.combineReducers({
     keplerGl: KeplerGl.keplerGlReducer.initialState({

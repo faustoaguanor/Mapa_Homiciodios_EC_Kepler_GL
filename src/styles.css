@@ -65,3 +65,14 @@
       .map-title-right { left: 75%; }
       .moran-sidebar.open .moran-panel { width: 160px; }
     }
+
+    .webgl-warning {
+      position: fixed; inset: 0; z-index: 20000; box-sizing: border-box;
+      padding: 12vh 8vw; background: #1d2129; color: #d8dde6;
+      font: 15px/1.6 'ff-clan-web-pro', 'Helvetica Neue', Helvetica, sans-serif;
+      overflow-y: auto;
+    }
+    .webgl-warning[hidden] { display: none; }
+    .webgl-warning h2 { color: #fff; margin-top: 0; }
+    .webgl-warning a { color: #7fc4e8; }
+    .webgl-warning code { background: rgba(255,255,255,.1); padding: 1px 5px; border-radius: 3px; }
