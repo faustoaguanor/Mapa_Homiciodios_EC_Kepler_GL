@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clústeres espaciales de homicidios en Ecuador — LISA urbano vs rural</title>
+  <meta name="author" content="faustoaguanor">
+  <meta name="description" content="Mapa interactivo de clústeres espaciales (Moran local, LISA) de homicidios por cantón en Ecuador, comparando zonas urbanas y rurales.">
+  <meta property="og:title" content="Clústeres espaciales de homicidios en Ecuador — LISA urbano vs rural">
+  <meta property="og:description" content="Mapa interactivo de doble panel: Índice de Moran Local de homicidios por cantón, urbano vs rural.">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="https://d1a3f4spazzrp4.cloudfront.net/kepler.gl/uber-fonts/4.0.0/superfine.css">
+  <link rel="stylesheet" href="https://unpkg.com/kepler.gl@3.3.0-alpha.0/umd/keplergl.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css">
+
+  <style>
+%%CSS%%
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <noscript>Este mapa requiere JavaScript.</noscript>
+
+  <div class="map-title map-title-left">Clústeres Urbanos · Homicidio</div>
+  <div class="map-title map-title-right">Clústeres Rurales · Homicidio</div>
+
+  <aside class="moran-sidebar open" id="moranSidebar">
+    <button class="moran-tab" id="moranTab" aria-expanded="true" aria-controls="moranPanel">Metodología y uso</button>
+    <div class="moran-panel" id="moranPanel">
+      <strong>&#9670; Índice de Moran Local (LISA)</strong>
+      Mide la autocorrelación espacial de los homicidios por cantón (p &lt; 0.05):
+      clústeres HH / LL y outliers HL / LH.
+      <hr class="legend-sep">
+      <strong>&#9670; Cómo usar el mapa</strong>
+      Panel izquierdo: zona urbana. Panel derecho: zona rural. Pase el cursor sobre un cantón
+      para ver conteo, categoría, tipo de clúster, I de Moran y valor p.
+      <hr class="legend-sep">
+      <strong>&#9670; Datos</strong>
+      Homicidios por cantón y zona (urbana/rural) y límites cantonales DPA del INEC. Detalle y reproducción en el
+      <a href="https://github.com/faustoaguanor/Mapa_Homiciodios_EC_Kepler_GL#datos" target="_blank" rel="noopener">README</a>.
+      <hr class="legend-sep">
+      <strong>&#9670; Créditos</strong>
+      Autor: <a href="https://github.com/faustoaguanor" target="_blank" rel="noopener">faustoaguanor</a>.
+      Hecho con <a href="https://kepler.gl" target="_blank" rel="noopener">Kepler.gl</a>,
+      <a href="https://maplibre.org" target="_blank" rel="noopener">MapLibre</a>, React y Redux.
+      Mapa base © CARTO, © colaboradores de OpenStreetMap.
+    </div>
+  </aside>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/redux@4.2.1/dist/redux.js" crossorigin></script>
+  <script src="https://unpkg.com/react-redux@8.1.2/dist/react-redux.min.js" crossorigin></script>
+  <script src="https://unpkg.com/styled-components@6.1.8/dist/styled-components.min.js" crossorigin></script>
+  <script src="https://unpkg.com/kepler.gl@3.3.0-alpha.0/umd/keplergl.min.js" crossorigin></script>
+
+  <script>
+%%DATA%%
+  </script>
+  <script>
+%%APP%%
+  </script>
+</body>
+</html>

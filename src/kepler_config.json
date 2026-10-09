@@ -1,0 +1,1154 @@
+{
+ "version": "v1",
+ "config": {
+  "visState": {
+   "filters": [
+    {
+     "dataId": [
+      "-7t46wt"
+     ],
+     "id": "a4l0b8w5o",
+     "name": [
+      "timestamp"
+     ],
+     "type": "timeRange",
+     "value": [
+      1741316870000,
+      1774915200000
+     ],
+     "plotType": {
+      "interval": "1-month",
+      "defaultTimeFormat": "L",
+      "type": "histogram",
+      "aggregation": "sum"
+     },
+     "animationWindow": "free",
+     "yAxis": null,
+     "view": "enlarged",
+     "speed": 1,
+     "enabled": true
+    }
+   ],
+   "layers": [
+    {
+     "id": "v2hpzqg",
+     "type": "heatmap",
+     "config": {
+      "dataId": "-7t46wt",
+      "columnMode": "points",
+      "label": "Heatmap",
+      "color": [
+       248,
+       149,
+       112
+      ],
+      "highlightColor": [
+       252,
+       242,
+       26,
+       255
+      ],
+      "columns": {
+       "lat": "latitude",
+       "lng": "longitude"
+      },
+      "isVisible": true,
+      "visConfig": {
+       "opacity": 1,
+       "colorRange": {
+        "colors": [
+         "#ffffcc",
+         "#ffeda0",
+         "#fed976",
+         "#feb24c",
+         "#fd8d3c",
+         "#f03b20"
+        ],
+        "name": "Global Warming",
+        "type": "sequential",
+        "category": "Uber",
+        "reversed": true
+       },
+       "radius": 20,
+       "intensity": 1,
+       "threshold": 0.18,
+       "aggregation": "SUM"
+      },
+      "hidden": false,
+      "textLabel": [
+       {
+        "field": null,
+        "color": [
+         255,
+         255,
+         255
+        ],
+        "size": 18,
+        "offset": [
+         0,
+         0
+        ],
+        "anchor": "start",
+        "alignment": "center",
+        "outlineWidth": 0,
+        "outlineColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "background": false,
+        "backgroundColor": [
+         0,
+         0,
+         200,
+         255
+        ]
+       }
+      ]
+     },
+     "visualChannels": {
+      "weightField": null,
+      "weightScale": "linear"
+     }
+    },
+    {
+     "id": "p2xvjfe",
+     "type": "geojson",
+     "config": {
+      "dataId": "-8hs4t8",
+      "columnMode": "geojson",
+      "label": "Homicidios Urbanos (Simbología Aplicada)",
+      "color": [
+       23,
+       184,
+       190
+      ],
+      "highlightColor": [
+       252,
+       242,
+       26,
+       255
+      ],
+      "columns": {
+       "geojson": "_geojson"
+      },
+      "isVisible": true,
+      "visConfig": {
+       "opacity": 0.8,
+       "strokeOpacity": 0.8,
+       "thickness": 0.5,
+       "strokeColor": [
+        246,
+        209,
+        138
+       ],
+       "colorRange": {
+        "name": "color.customPalette",
+        "type": "custom",
+        "category": "Custom",
+        "colors": [
+         "#ffffcc",
+         "#c7e9b4",
+         "#7fcdbb",
+         "#41b6c4",
+         "#2c7fb8"
+        ],
+        "colorMap": [
+         [
+          1,
+          "#ffffcc"
+         ],
+         [
+          4,
+          "#c7e9b4"
+         ],
+         [
+          16.9,
+          "#7fcdbb"
+         ],
+         [
+          107.1,
+          "#41b6c4"
+         ],
+         [
+          null,
+          "#2c7fb8"
+         ]
+        ]
+       },
+       "strokeColorRange": {
+        "name": "color.customPalette",
+        "type": "custom",
+        "category": "Custom",
+        "colors": [
+         "#ffffcc",
+         "#c7e9b4",
+         "#7fcdbb",
+         "#41b6c4",
+         "#2c7fb8"
+        ],
+        "colorMap": [
+         [
+          1,
+          "#ffffcc"
+         ],
+         [
+          4,
+          "#c7e9b4"
+         ],
+         [
+          16.9,
+          "#7fcdbb"
+         ],
+         [
+          107.1,
+          "#41b6c4"
+         ],
+         [
+          null,
+          "#2c7fb8"
+         ]
+        ]
+       },
+       "radius": 10,
+       "sizeRange": [
+        0,
+        10
+       ],
+       "radiusRange": [
+        0,
+        50
+       ],
+       "heightRange": [
+        0,
+        500
+       ],
+       "elevationScale": 5,
+       "stroked": true,
+       "filled": true,
+       "enable3d": false,
+       "wireframe": false,
+       "fixedHeight": false,
+       "allowHover": true
+      },
+      "hidden": false,
+      "textLabel": [
+       {
+        "field": null,
+        "color": [
+         255,
+         255,
+         255
+        ],
+        "size": 18,
+        "offset": [
+         0,
+         0
+        ],
+        "anchor": "start",
+        "alignment": "center",
+        "outlineWidth": 0,
+        "outlineColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "background": false,
+        "backgroundColor": [
+         0,
+         0,
+         200,
+         255
+        ]
+       }
+      ]
+     },
+     "visualChannels": {
+      "colorField": {
+       "name": "homicidios_urbanos",
+       "type": "integer"
+      },
+      "colorScale": "custom",
+      "strokeColorField": {
+       "name": "homicidios_urbanos",
+       "type": "integer"
+      },
+      "strokeColorScale": "custom",
+      "sizeField": null,
+      "sizeScale": "linear",
+      "heightField": null,
+      "heightScale": "linear",
+      "radiusField": null,
+      "radiusScale": "linear"
+     }
+    },
+    {
+     "id": "rkx8m86",
+     "type": "geojson",
+     "config": {
+      "dataId": "h6tp0y",
+      "columnMode": "geojson",
+      "label": "Homicidios Rurales (Simbología Aplicada)",
+      "color": [
+       18,
+       147,
+       154
+      ],
+      "highlightColor": [
+       252,
+       242,
+       26,
+       255
+      ],
+      "columns": {
+       "geojson": "_geojson"
+      },
+      "isVisible": true,
+      "visConfig": {
+       "opacity": 0.8,
+       "strokeOpacity": 0.8,
+       "thickness": 0.5,
+       "strokeColor": [
+        221,
+        178,
+        124
+       ],
+       "colorRange": {
+        "name": "color.customPalette",
+        "type": "custom",
+        "category": "Custom",
+        "colors": [
+         "#f2f0f7",
+         "#cbc9e2",
+         "#9e9ac8",
+         "#756bb1",
+         "#54278f"
+        ],
+        "colorMap": [
+         [
+          4,
+          "#f2f0f7"
+         ],
+         [
+          10,
+          "#cbc9e2"
+         ],
+         [
+          26,
+          "#9e9ac8"
+         ],
+         [
+          76,
+          "#756bb1"
+         ],
+         [
+          null,
+          "#54278f"
+         ]
+        ]
+       },
+       "strokeColorRange": {
+        "name": "color.customPalette",
+        "type": "custom",
+        "category": "Custom",
+        "colors": [
+         "#f2f0f7",
+         "#cbc9e2",
+         "#9e9ac8",
+         "#756bb1",
+         "#54278f"
+        ],
+        "colorMap": [
+         [
+          4,
+          "#f2f0f7"
+         ],
+         [
+          10,
+          "#cbc9e2"
+         ],
+         [
+          26,
+          "#9e9ac8"
+         ],
+         [
+          76,
+          "#756bb1"
+         ],
+         [
+          null,
+          "#54278f"
+         ]
+        ]
+       },
+       "radius": 10,
+       "sizeRange": [
+        0,
+        10
+       ],
+       "radiusRange": [
+        0,
+        50
+       ],
+       "heightRange": [
+        0,
+        500
+       ],
+       "elevationScale": 5,
+       "stroked": true,
+       "filled": true,
+       "enable3d": false,
+       "wireframe": false,
+       "fixedHeight": false,
+       "allowHover": true
+      },
+      "hidden": false,
+      "textLabel": [
+       {
+        "field": null,
+        "color": [
+         255,
+         255,
+         255
+        ],
+        "size": 18,
+        "offset": [
+         0,
+         0
+        ],
+        "anchor": "start",
+        "alignment": "center",
+        "outlineWidth": 0,
+        "outlineColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "background": false,
+        "backgroundColor": [
+         0,
+         0,
+         200,
+         255
+        ]
+       }
+      ]
+     },
+     "visualChannels": {
+      "colorField": {
+       "name": "homicidios_rurales",
+       "type": "integer"
+      },
+      "colorScale": "custom",
+      "strokeColorField": {
+       "name": "homicidios_rurales",
+       "type": "integer"
+      },
+      "strokeColorScale": "custom",
+      "sizeField": null,
+      "sizeScale": "linear",
+      "heightField": null,
+      "heightScale": "linear",
+      "radiusField": null,
+      "radiusScale": "linear"
+     }
+    },
+    {
+     "id": "qlxdln",
+     "type": "geojson",
+     "config": {
+      "dataId": "zgayf8",
+      "columnMode": "geojson",
+      "label": "Hotspots Urbanos (Simbología Aplicada)",
+      "color": [
+       130,
+       154,
+       227
+      ],
+      "highlightColor": [
+       252,
+       242,
+       26,
+       255
+      ],
+      "columns": {
+       "geojson": "_geojson"
+      },
+      "isVisible": true,
+      "visConfig": {
+       "opacity": 0.8,
+       "strokeOpacity": 0.8,
+       "thickness": 0.3,
+       "strokeColor": [
+        248,
+        248,
+        249
+       ],
+       "colorRange": {
+        "name": "color.customPalette",
+        "type": "custom",
+        "category": "Custom",
+        "colors": [
+         "#d7191c",
+         "#fdae61",
+         "#abd9e9",
+         "#2c7bb6",
+         "#d3d3d3"
+        ],
+        "colorMap": [
+         [
+          "HH - Hotspot",
+          "#d7191c"
+         ],
+         [
+          "HL - Outlier alto",
+          "#fdae61"
+         ],
+         [
+          "LH - Outlier bajo",
+          "#abd9e9"
+         ],
+         [
+          "LL - Coldspot",
+          "#2c7bb6"
+         ],
+         [
+          "No significativo",
+          "#d3d3d3"
+         ]
+        ]
+       },
+       "strokeColorRange": {
+        "name": "color.customPalette",
+        "type": "custom",
+        "category": "Custom",
+        "colors": [
+         "#d7191c",
+         "#fdae61",
+         "#abd9e9",
+         "#2c7bb6",
+         "#d3d3d3"
+        ],
+        "colorMap": [
+         [
+          "HH - Hotspot",
+          "#d7191c"
+         ],
+         [
+          "HL - Outlier alto",
+          "#fdae61"
+         ],
+         [
+          "LH - Outlier bajo",
+          "#abd9e9"
+         ],
+         [
+          "LL - Coldspot",
+          "#2c7bb6"
+         ],
+         [
+          "No significativo",
+          "#d3d3d3"
+         ]
+        ]
+       },
+       "radius": 10,
+       "sizeRange": [
+        0,
+        10
+       ],
+       "radiusRange": [
+        0,
+        50
+       ],
+       "heightRange": [
+        0,
+        500
+       ],
+       "elevationScale": 5,
+       "stroked": true,
+       "filled": true,
+       "enable3d": false,
+       "wireframe": false,
+       "fixedHeight": false,
+       "allowHover": true
+      },
+      "hidden": false,
+      "textLabel": [
+       {
+        "field": null,
+        "color": [
+         255,
+         255,
+         255
+        ],
+        "size": 18,
+        "offset": [
+         0,
+         0
+        ],
+        "anchor": "start",
+        "alignment": "center",
+        "outlineWidth": 0,
+        "outlineColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "background": false,
+        "backgroundColor": [
+         0,
+         0,
+         200,
+         255
+        ]
+       }
+      ]
+     },
+     "visualChannels": {
+      "colorField": {
+       "name": "lisa_cluster",
+       "type": "string"
+      },
+      "colorScale": "customOrdinal",
+      "strokeColorField": null,
+      "strokeColorScale": "quantile",
+      "sizeField": null,
+      "sizeScale": "linear",
+      "heightField": null,
+      "heightScale": "linear",
+      "radiusField": null,
+      "radiusScale": "linear"
+     }
+    },
+    {
+     "id": "980e40a",
+     "type": "geojson",
+     "config": {
+      "dataId": "xzn54m",
+      "columnMode": "geojson",
+      "label": "Hotspots Rurales (Simbología Aplicada)",
+      "color": [
+       130,
+       154,
+       227
+      ],
+      "highlightColor": [
+       252,
+       242,
+       26,
+       255
+      ],
+      "columns": {
+       "geojson": "_geojson"
+      },
+      "isVisible": true,
+      "visConfig": {
+       "opacity": 0.8,
+       "strokeOpacity": 0.8,
+       "thickness": 0.5,
+       "strokeColor": [
+        231,
+        159,
+        213
+       ],
+       "colorRange": {
+        "name": "color.customPalette",
+        "type": "custom",
+        "category": "Custom",
+        "colors": [
+         "#b2182b",
+         "#f4a582",
+         "#92c5de",
+         "#2166ac",
+         "#f0f0f0"
+        ],
+        "colorMap": [
+         [
+          "HH - Hotspot",
+          "#b2182b"
+         ],
+         [
+          "HL - Outlier alto",
+          "#f4a582"
+         ],
+         [
+          "LH - Outlier bajo",
+          "#92c5de"
+         ],
+         [
+          "LL - Coldspot",
+          "#2166ac"
+         ],
+         [
+          "No significativo",
+          "#f0f0f0"
+         ]
+        ]
+       },
+       "strokeColorRange": {
+        "name": "color.customPalette",
+        "type": "custom",
+        "category": "Custom",
+        "colors": [
+         "#b2182b",
+         "#f4a582",
+         "#92c5de",
+         "#2166ac",
+         "#f0f0f0"
+        ],
+        "colorMap": [
+         [
+          "HH - Hotspot",
+          "#b2182b"
+         ],
+         [
+          "HL - Outlier alto",
+          "#f4a582"
+         ],
+         [
+          "LH - Outlier bajo",
+          "#92c5de"
+         ],
+         [
+          "LL - Coldspot",
+          "#2166ac"
+         ],
+         [
+          "No significativo",
+          "#f0f0f0"
+         ]
+        ]
+       },
+       "radius": 10,
+       "sizeRange": [
+        0,
+        10
+       ],
+       "radiusRange": [
+        0,
+        50
+       ],
+       "heightRange": [
+        0,
+        500
+       ],
+       "elevationScale": 5,
+       "stroked": true,
+       "filled": true,
+       "enable3d": false,
+       "wireframe": false,
+       "fixedHeight": false,
+       "allowHover": true
+      },
+      "hidden": false,
+      "textLabel": [
+       {
+        "field": null,
+        "color": [
+         255,
+         255,
+         255
+        ],
+        "size": 18,
+        "offset": [
+         0,
+         0
+        ],
+        "anchor": "start",
+        "alignment": "center",
+        "outlineWidth": 0,
+        "outlineColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "background": false,
+        "backgroundColor": [
+         0,
+         0,
+         200,
+         255
+        ]
+       }
+      ]
+     },
+     "visualChannels": {
+      "colorField": {
+       "name": "lisa_cluster",
+       "type": "string"
+      },
+      "colorScale": "customOrdinal",
+      "strokeColorField": {
+       "name": "lisa_cluster",
+       "type": "string"
+      },
+      "strokeColorScale": "customOrdinal",
+      "sizeField": null,
+      "sizeScale": "linear",
+      "heightField": null,
+      "heightScale": "linear",
+      "radiusField": null,
+      "radiusScale": "linear"
+     }
+    },
+    {
+     "id": "a5la1pg",
+     "type": "geojson",
+     "config": {
+      "dataId": "-59fsyl",
+      "columnMode": "geojson",
+      "label": "DPA_Cantonal",
+      "color": [
+       205,
+       201,
+       191
+      ],
+      "highlightColor": [
+       252,
+       242,
+       26,
+       255
+      ],
+      "columns": {
+       "geojson": "_geojson"
+      },
+      "isVisible": true,
+      "visConfig": {
+       "opacity": 0,
+       "strokeOpacity": 0.1,
+       "thickness": 0.4,
+       "strokeColor": [
+        192,
+        192,
+        192
+       ],
+       "colorRange": {
+        "name": "Global Warming",
+        "type": "sequential",
+        "category": "Uber",
+        "colors": [
+         "#4C0035",
+         "#880030",
+         "#B72F15",
+         "#D6610A",
+         "#EF9100",
+         "#FFC300"
+        ]
+       },
+       "strokeColorRange": {
+        "name": "Global Warming",
+        "type": "sequential",
+        "category": "Uber",
+        "colors": [
+         "#4C0035",
+         "#880030",
+         "#B72F15",
+         "#D6610A",
+         "#EF9100",
+         "#FFC300"
+        ]
+       },
+       "radius": 10,
+       "sizeRange": [
+        0,
+        10
+       ],
+       "radiusRange": [
+        0,
+        50
+       ],
+       "heightRange": [
+        0,
+        500
+       ],
+       "elevationScale": 5,
+       "stroked": true,
+       "filled": true,
+       "enable3d": false,
+       "wireframe": false,
+       "fixedHeight": false,
+       "allowHover": true
+      },
+      "hidden": false,
+      "textLabel": [
+       {
+        "field": null,
+        "color": [
+         255,
+         255,
+         255
+        ],
+        "size": 18,
+        "offset": [
+         0,
+         0
+        ],
+        "anchor": "start",
+        "alignment": "center",
+        "outlineWidth": 0,
+        "outlineColor": [
+         255,
+         0,
+         0,
+         255
+        ],
+        "background": false,
+        "backgroundColor": [
+         0,
+         0,
+         200,
+         255
+        ]
+       }
+      ]
+     },
+     "visualChannels": {
+      "colorField": null,
+      "colorScale": "quantile",
+      "strokeColorField": null,
+      "strokeColorScale": "quantile",
+      "sizeField": null,
+      "sizeScale": "linear",
+      "heightField": null,
+      "heightScale": "linear",
+      "radiusField": null,
+      "radiusScale": "linear"
+     }
+    }
+   ],
+   "effects": [],
+   "interactionConfig": {
+    "tooltip": {
+     "fieldsToShow": {
+      "xzn54m": [
+       {
+        "name": "DPA_CANTON",
+        "format": null
+       },
+       {
+        "name": "canton",
+        "format": null
+       },
+       {
+        "name": "provincia",
+        "format": null
+       },
+       {
+        "name": "homicidios_rurales",
+        "format": null
+       },
+       {
+        "name": "categoria",
+        "format": null
+       }
+      ],
+      "zgayf8": [
+       {
+        "name": "DPA_CANTON",
+        "format": null
+       },
+       {
+        "name": "canton",
+        "format": null
+       },
+       {
+        "name": "provincia",
+        "format": null
+       },
+       {
+        "name": "homicidios_urbanos",
+        "format": null
+       },
+       {
+        "name": "categoria",
+        "format": null
+       }
+      ],
+      "-8hs4t8": [
+       {
+        "name": "DPA_CANTON",
+        "format": null
+       },
+       {
+        "name": "canton",
+        "format": null
+       },
+       {
+        "name": "provincia",
+        "format": null
+       },
+       {
+        "name": "homicidios_urbanos",
+        "format": null
+       },
+       {
+        "name": "categoria",
+        "format": null
+       }
+      ],
+      "h6tp0y": [
+       {
+        "name": "DPA_CANTON",
+        "format": null
+       },
+       {
+        "name": "canton",
+        "format": null
+       },
+       {
+        "name": "provincia",
+        "format": null
+       },
+       {
+        "name": "homicidios_rurales",
+        "format": null
+       },
+       {
+        "name": "categoria",
+        "format": null
+       }
+      ],
+      "-7t46wt": [
+       {
+        "name": "tipo_muerte",
+        "format": null
+       },
+       {
+        "name": "zona",
+        "format": null
+       },
+       {
+        "name": "subzona",
+        "format": null
+       },
+       {
+        "name": "distrito",
+        "format": null
+       },
+       {
+        "name": "circuito",
+        "format": null
+       }
+      ],
+      "-59fsyl": [
+       {
+        "name": "DPA_VALOR",
+        "format": null
+       },
+       {
+        "name": "DPA_ANIO",
+        "format": null
+       },
+       {
+        "name": "DPA_CANTON",
+        "format": null
+       },
+       {
+        "name": "DPA_DESCAN",
+        "format": null
+       },
+       {
+        "name": "DPA_PROVIN",
+        "format": null
+       }
+      ]
+     },
+     "compareMode": false,
+     "compareType": "absolute",
+     "enabled": true
+    },
+    "brush": {
+     "size": 0.5,
+     "enabled": false
+    },
+    "geocoder": {
+     "enabled": false
+    },
+    "coordinate": {
+     "enabled": false
+    }
+   },
+   "layerBlending": "normal",
+   "overlayBlending": "normal",
+   "splitMaps": [
+    {
+     "layers": {
+      "p2xvjfe": false,
+      "rkx8m86": false,
+      "qlxdln": false,
+      "980e40a": false,
+      "v2hpzqg": true,
+      "a5la1pg": true
+     }
+    },
+    {
+     "layers": {
+      "p2xvjfe": false,
+      "rkx8m86": false,
+      "qlxdln": false,
+      "980e40a": false,
+      "v2hpzqg": true,
+      "a5la1pg": true
+     }
+    }
+   ],
+   "animationConfig": {
+    "currentTime": null,
+    "speed": 1
+   },
+   "editor": {
+    "features": [],
+    "visible": true
+   }
+  },
+  "mapState": {
+   "bearing": 0,
+   "dragRotate": false,
+   "latitude": -2.709767451930464,
+   "longitude": -78.51181348434898,
+   "pitch": 0,
+   "zoom": 5.78288143094078,
+   "isSplit": true,
+   "isViewportSynced": true,
+   "isZoomLocked": false,
+   "splitMapViewports": []
+  },
+  "mapStyle": {
+   "styleType": "dark-matter",
+   "topLayerGroups": {},
+   "visibleLayerGroups": {
+    "label": true,
+    "road": true,
+    "border": false,
+    "building": true,
+    "water": true,
+    "land": true,
+    "3d building": false
+   },
+   "threeDBuildingColor": [
+    15.035172933000911,
+    15.035172933000911,
+    15.035172933000911
+   ],
+   "backgroundColor": [
+    0,
+    0,
+    0
+   ],
+   "mapStyles": {}
+  },
+  "uiState": {
+   "mapControls": {
+    "mapLegend": {
+     "active": false
+    }
+   }
+  }
+ }
+}
