@@ -3,6 +3,21 @@
 (function () {
   'use strict';
 
+  /* Kepler.gl (deck.gl) necesita WebGL: si el navegador lo tiene desactivado,
+   * se avisa en lugar de dejar que falle con "An error in deck.gl". */
+  function hasWebGL() {
+    try {
+      var c = document.createElement('canvas');
+      return Boolean(c.getContext('webgl2') || c.getContext('webgl'));
+    } catch (e) {
+      return false;
+    }
+  }
+  if (!hasWebGL()) {
+    document.getElementById('webglWarning').hidden = false;
+    return;
+  }
+
   var reducers = Redux.combineReducers({
     keplerGl: KeplerGl.keplerGlReducer.initialState({
       uiState: {readOnly: true, currentModal: null},
