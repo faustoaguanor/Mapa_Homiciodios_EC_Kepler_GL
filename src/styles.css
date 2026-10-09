@@ -1,0 +1,67 @@
+    html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+
+    .map-title {
+      position: fixed;
+      top: 14px;
+      z-index: 9999;
+      background: rgba(20, 20, 30, 0.78);
+      color: #fff;
+      font: 600 12px 'ff-clan-web-pro', 'Helvetica Neue', Helvetica, sans-serif;
+      padding: 5px 14px;
+      border-radius: 4px;
+      pointer-events: none;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      border-left: 3px solid #e74c3c;
+      white-space: nowrap;
+      transform: translateX(-50%);
+    }
+    .map-title-left  { left: 36%; }
+    .map-title-right { left: 83%; }
+
+    .moran-sidebar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+    }
+    .moran-tab {
+      writing-mode: vertical-rl;
+      background: rgba(20, 20, 30, 0.82);
+      color: #b4c2d0;
+      font: 600 10px 'ff-clan-web-pro', 'Helvetica Neue', Helvetica, sans-serif;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 10px 6px;
+      border: none;
+      border-right: 2px solid #7f8fa4;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      flex-shrink: 0;
+      user-select: none;
+    }
+    .moran-tab:hover, .moran-tab:focus-visible { color: #fff; }
+    .moran-panel {
+      background: rgba(20, 20, 30, 0.88);
+      color: #d0d0d0;
+      font: 11px/1.5 'ff-clan-web-pro', 'Helvetica Neue', Helvetica, sans-serif;
+      width: 0;
+      padding: 0;
+      overflow: hidden;
+      transition: width 0.28s ease, padding 0.28s ease;
+      border-radius: 0 4px 4px 0;
+    }
+    .moran-sidebar.open .moran-panel { width: 210px; padding: 10px 12px; max-height: 80vh; overflow-y: auto; }
+    .moran-panel strong { color: #fff; font-size: 11px; display: block; margin-bottom: 2px; }
+    .moran-panel a { color: #7fc4e8; }
+    .moran-panel .legend-sep { border: none; border-top: 1px solid rgba(255, 255, 255, 0.12); margin: 8px 0; }
+
+    @media (max-width: 700px) {
+      .map-title { font-size: 10px; padding: 4px 8px; letter-spacing: 0.4px; }
+      .map-title-left  { left: 25%; }
+      .map-title-right { left: 75%; }
+      .moran-sidebar.open .moran-panel { width: 160px; }
+    }
