@@ -89,15 +89,28 @@ scripts/extract_legacy.py   (histórico) extrajo data/ del index.html monolític
 python3 scripts/build.py   # solo requiere Python 3, sin dependencias
 ```
 
-## Tecnologías
+## Créditos y librerías de terceros
 
-[Kepler.gl 3.3 (alpha)](https://kepler.gl) · [MapLibre GL JS](https://maplibre.org) · React 18 · Redux · mapa base Carto *Dark Matter*.
+Este proyecto no sería posible sin software libre. Todas las librerías se cargan desde CDN (unpkg) y conservan su licencia original:
+
+| Librería | Uso | Licencia |
+| --- | --- | --- |
+| [Kepler.gl](https://github.com/keplergl/kepler.gl) 3.3.0-alpha.0 (OpenJS Foundation / Uber) | Visualización geoespacial y vista dividida | MIT |
+| [MapLibre GL JS](https://maplibre.org) 3.6 | Renderizado del mapa | BSD-3-Clause |
+| [React](https://react.dev) / ReactDOM 18.3.1 | Interfaz | MIT |
+| [Redux](https://redux.js.org) 4.2.1 / [React-Redux](https://react-redux.js.org) 8.1.2 | Estado de la aplicación | MIT |
+| [styled-components](https://styled-components.com) 6.1.8 | Estilos de Kepler.gl | MIT |
+| [CARTO Dark Matter](https://carto.com/basemaps) · datos © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors | Mapa base | CC BY 3.0 / ODbL |
+| Fuente *Superfine* de Uber | Tipografía de la interfaz | Uso conforme a Kepler.gl |
+
+Datos: límites cantonales © [INEC Ecuador](https://www.ecuadorencifras.gob.ec) (DPA). Metodología: Anselin, L. (1995), *Local Indicators of Spatial Association — LISA*, Geographical Analysis 27(2).
 
 ## Licencia
 
-Contenido bajo [CC BY 4.0](LICENSE). Kepler.gl y MapLibre conservan sus licencias (MIT / BSD-3).
-Cite como: FAGR (2026). *Clústeres espaciales de homicidios en Ecuador (LISA urbano vs rural)*. GitHub.
+El contenido propio de este repositorio (mapa, análisis y datos procesados) se distribuye bajo [CC BY 4.0](LICENSE). Las librerías de terceros conservan sus propias licencias.
 
-## Autor
+## Autoría
 
-FAGR · [@faustoaguanor](https://github.com/faustoaguanor)
+**faustoaguanor** — [github.com/faustoaguanor](https://github.com/faustoaguanor)
+
+Cite como: faustoaguanor (2026). *Clústeres espaciales de homicidios en Ecuador (LISA urbano vs rural)*. GitHub. https://github.com/faustoaguanor/Mapa_Homiciodios_EC_Kepler_GL
